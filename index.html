@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Bartosz Art">
+	<meta name="description" content="ModernCar companay web page">
+	<link fetchpriority="high rel="preload" href="img/logo.svg" as="image">
+	<link rel="stylesheet" href="styles/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet" media="screen">
+	<script src="scripts/script.min.js" async></script>
+	<link rel="icon" type="image/svg+xml" sizes="any" href="img/favicon.svg">
+
+	<title>ModernCar</title>
+</head>
+<body>
+	<header>
+		<a href="/" class="logo" aria-label="Home page">
+			<img width="268" height="70" src="img/logo.svg" alt="logo" fetchpriority="high">
+		</a>
+
+		<div class="hamburger" onclick="toogleHamburgerMenu(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+
+		<nav>
+			<ul class="nav-list">
+				<li>
+					<a href="#detailing" onclick="toogleHamburgerMenu(this)" aria-label="Read more about detailing">Usługi</a>
+				</li>
+				<li><a href="#door-to-door" onclick="toogleHamburgerMenu(this)" aria-label="Read more about door to door">Door To Door</a></li>
+				<li><a href="#kontakt" onclick="toogleHamburgerMenu(this)" aria-label="Contact us">Kontakt</a></li>
+				<li>
+					<a href="https://www.facebook.com/moderncarpl" target="_blank" aria-label="Visit our Facebook page">
+						<img width="25" height="25" src="img/icons/facebook.svg" alt="facebook">
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/_moderncar/?hl=pl" target="_blank" aria-label="Visit our Instagram page">
+						<img width="25" height="25" src="img/icons/instagram.svg" alt="instagram">
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="main-section">
+			<h1>
+				<span>DETAILING</span>
+				<span>⟡</span>
+				<span>ZMIANA KOLORU</span>
+				<span>⟡</span>
+				<span>TUNING</span>
+			</h1>
+			<p>Dojeżdżamy również w dogodne miejsce, oferująć usługę door to door</p>
+			<a class="scroll-down" href="#detailing" aria-label="Read more about detailing">
+				<img width="25" height="25" src="img/icons/arrow-down.svg" alt="more">
+			</a>
+		</section>
+		
+		<section class="static-section" id="detailing">
+			<img 
+				width="auto" 
+				height="auto" 
+				src="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/interior.jpg" 
+				alt="car_interior"
+				loading="lazy"
+			>
+			<div class="container">
+				<div class="text-container">
+					<h2>DETAILING</h2>
+					<p>
+						Detailing to dbałość o szczegóły. Przy wykorzystaniu sprawdzonych metod oraz środków do pielęgnacji
+						pojazdów, wydobywamy z pojazdów ich walory wizualne.
+					</p>
+					<p>
+						Na zakres oferowanych przez nas usług detailingu składają się:
+					<ul>
+						<li>Korekta (polerowanie) lakieru</li>
+						<li>Zabezpieczenie lakieru powłokami ceramicznymi oraz woskami</li>
+						<li>Profesjonalna pielęgnacja wnętrza</li>
+					</ul>
+					</p>
+					<p>
+						Szczegółowe informacje dotyczące zakresu usług oraz ich ceny znajdziesz w naszym katalogu.
+					</p>
+				</div>
+				<div class="button-container">
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/katalog_2021.pdf" target="_blank" aria-label="Read more in catalog">Zobacz katalog</a>
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/cennik_2021.pdf" target="_blank"  aria-label="Check prices">Cennik</a>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="parallax" id="color-change" data-bgc-position="700">
+			<div class="container">
+				<div class="text-container">
+					<h2>ZMIANA KOLORU</h2>
+					<p>Zmiana koloru pojazdu przy użyciu folii. Rozwiązanie umożliwiające zmianę koloru Twojego samochodu
+						lub poszczególnych elementów bez naruszenia oryginalnego lakieru. Korzystna i jedyna sensowna
+						alternatywa w porównaniu do kosztownego lakierowania. Setki kolorów do wybrania, gwarantują
+						możliwość zindywidualizowania koloru samochodu lub jego poszczególnych elementów.</p>
+					<p>Szczegółowe informacje dotyczące zakresu usług oraz ich ceny znajdziesz w naszym katalogu.</p>
+				</div>
+				<div class="button-container">
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/katalog_2021.pdf" target="_blank" aria-label="Read more in catalog">Zobacz katalog</a>
+					<a href="#kontakt" aria-label="Contact us">Zapytaj o wycenę</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="static-section">
+			<div class="container">
+				<div class="text-container">
+					<h2>FOLIA OCHRONNA PPF</h1>
+					<p>Dla najbardziej wymagających klientów oferujemy zabezpieczenie samochodu <b>bezbarwną folią ochronną
+							–
+							PPF</b>. W obecnych czasach nie znajdą Państwo lepszej metody, aby ochronić swój pojazd.</p>
+					<p>Chroni ona przed <b>uszkodzeniami mechanicznymi, atmosferycznymi, odpryskami, małymi szkodami
+							parkingowymi i
+							chemicznymi</b> dzięki czemu nie musimy się martwić o potrzebę ponownego lakierowania elementów
+						w wyniku
+						wymienionych zdarzeń. Ponadto folia posiada <b>właściwość samoregeneracji</b>, co oznacza znikanie
+						drobnych
+						zarysowań pod wpływem ciepła.</p>
+					<p>Jej aplikacja przynosi też wiele korzyści wizualnych takich jak
+						<b>lustrzana szklistość</b>, <b>zwiększona głębia koloru</b> czy <b>hydrofobowość</b>. Dążąc do
+						najwyższego zadowolenia
+						naszych klientów korzystamy z najlepszych produktów na rynku.
+					</p>
+					<p>Szczegółowe informacje dotyczące zakresu usług oraz ich ceny znajdziesz w naszym katalogu.</p>
+				</div>
+				<div class="button-container">
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/katalog_2021.pdf" target="_blank" aria-label="Read more in catalog">Zobacz katalog</a>
+				</div>
+			</div>
+			<img 
+				width="auto" 
+				height="auto" 
+				src="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/car_back.jpg" 
+				alt="car"
+				loading="lazy"
+			>
+		</section>
+
+		<section class="parallax" id="window-tint" data-bgc-position="200">
+			<div class="container">
+				<div class="text-container">
+					<h2>PRZYCIEMNIANIE SZYB</h2>
+					<p>Zróżnicowane barwy folii przyciemniającej, rozpraszające promienie UV są rozwiązaniem poprawiającym
+						<b>komfort podczas podróży</b> oraz chroniącym przed <b>nadmiernym nagrzewaniem się pojazdu</b>.
+					</p>
+					<p>W Polsce przepuszczalność światła przednich szyb nie może być niższa niż 70%, jednak ustawodawca nie
+						wspomina o stopniu przyciemnienia tylnej części pojazdu, zatem możemy zastosować zarówno <b>folie
+							lekko
+							„zadymiącą”</b> tylne szyby, jak i te najciemniejsze które nie dają możliwości zajrzenia do
+						samochodu z
+						zewnątrz.</p>
+					<p>Wybierając odcień folii, zawsze przeprowadzamy z klientem rozmowę, mającą na celu
+						uwzględnienie jego indywidualnych potrzeb.</p>
+					<p>Przyciemnienia dostępne są w zakresach: <b>5%, 12%, 20%, 36% oraz 50%</b> transmisji światła
+						widzialnego.</p>
+					<p>Szczegółowe informacje dotyczące zakresu usług oraz ich ceny znajdziesz w naszym katalogu.</p>
+				</div>
+				<div class="button-container">
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/katalog_2021.pdf" target="_blank" aria-label="Read more in catalog">Zobacz katalog</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="static-section">
+			<img 
+				width="auto" 
+				height="auto" 
+				src="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/tuning.jpg" 
+				alt="car_tuning"
+				loading="lazy"
+			>
+			<div class="container">
+				<div class="text-container">
+					<h2>TUNING</h2>
+					<p>Sportowe zawieszenia, szerokie felgi, sportowe układy wydechowe, poszerzenia i modyfikacje
+						seryjnej karoserii, to właśnie strefa tuningu.</p>
+					<p>Dzięki doświadczeniu w budowie zmodyfikowanych
+						pojazdów oraz zbudowanych przez lata kontaktów, pomagamy oraz przeprowadzamy klientów przez cały
+						proces modyfikacji ich aut. Razem z klientami realizujemy ich pomysły, odpowiadające ich potrzebą,
+						pomagając w wyborze sprawdzonych rozwiązań zmian wizualnych oraz mechanicznych.</p>
+					<p>Szczegółowe informacje dotyczące zakresu usług oraz ich ceny znajdziesz w naszym katalogu.</p>
+				</div>
+				<div class="button-container">
+					<a href="https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/katalog_2021.pdf" target="_blank" aria-label="Read more in catalog">Zobacz katalog</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="parallax" id="door-to-door" data-bgc-position="150" id>
+			<div class="container">
+				<div class="text-container">
+					<h2>DOOR TO DOOR</h2>
+					<p>Nasza siedziba mieści się w <b>Warszawie</b>, ale możemy odebrać pojazd z dogodnego miejsca i odwieźć
+						również w umówione miejsce, dla Twojej wygody. Zapoznaj się z poszczególnymi kategoriami, sprawdź
+						dane kontaktowe i umów
+						się na wizytę</p>
+				</div>
+				<div class="button-container">
+					<a href="#kontakt" aria-label="Contact us">Umów się już dziś</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="static-section contact" id="kontakt">
+			<div class="contact-data">
+				<h2>KONTAKT</h2>
+				<span class="contact-data-title">ModernCar</span>
+				
+				<hr>
+
+				<div class="contact-data-section">
+					<span class="title"><img width="20" height="20" src="img/icons/location.svg" alt="location"><b>Adres:</b></span>
+					<p>ul.Bohuna 2, 03-289 Warszawa (Białołęka)</p>
+				</div>
+				<div class="contact-data-section">
+					<span class="title"><img width="20" height="20" src="img/icons/phone.svg" alt="phone"><b>Telefon:</b></span>
+					<p><a href="tel:+48507387804" aria-label="Call us">+48 507-387-804</a></p>
+				</div>
+				<div class="contact-data-section">
+					<span class="title"><img width="20" height="20" src="img/icons/at.svg" alt="at"><b>E-mail:</b></span>
+					<p><a href="mailto:biuro@moderncar.pl" aria-label="Write an email">biuro@moderncar.pl</a></p>
+				</div>
+			</div>
+			<iframe class="map" title="map"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45102.66399219642!2d21.036708066152343!3d52.300118197663316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecf270077cc35%3A0xaaabcb993be30795!2sModerncar%20-%20Detailing%20%7C%20Oklejanie%20aut%20%7C%20Tuning!5e0!3m2!1spl!2spl!4v1638477261339!5m2!1spl!2spl"
+				width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+			></iframe>
+		</section>
+
+		<footer>
+			<span class="no-wrap">Copyright © 2021 <a href="index.html" aria-label="Main page">ModernCar</a></span>
+			<p>|</p> 
+			<span class="no-wrap">Developed by <a href="https://bartart.dev/" target="_blank" aria-label="Visit developer page">Bartosz Art</a></span>
+		</footer>
+	</main>
+</body>
+</html>

@@ -1,0 +1,412 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-primary: #103241;
+	--color-primary-darken: hsl(198, 60%, 10%);
+	--color-primary-dark: hsl(198, 60%, 5%);
+	--color-primary-x-light: hsl(198, 60%, 60%);
+	--color-accent: #d22b2b;
+	--color-accent-1: #f31e1f;
+	--color-accent-2: #790f0f;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* MAIN ELEMENTS */
+
+body {
+	background-color: #121418;
+	margin: 0;
+	font-family: Montserrat !important;
+	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	overflow-x: hidden;
+}
+
+/* TYPOGRAPHY */
+
+h1, h2 {
+	text-align: center;
+	color: #fff;
+	font-weight: 400;
+}
+
+h1, h1 > * {
+	text-shadow: 5px 5px 6px #000;
+	line-height: 10vw;
+	display: flex;
+	flex-direction: column;
+	justify-self: start !important;
+}
+
+h1, h1 > * {
+	font-size: 7vw !important;
+	line-height: 8vw !important;
+}
+
+@media screen and (min-width: 900px) {
+	h1 {
+		width: 100%;
+		flex-direction: row;
+		gap: 1rem;
+		justify-content: center;
+	}
+	
+	h1, h1 > * {
+		font-size: min(4vw, 3.5rem) !important;
+	}
+}
+
+h2 {
+	text-shadow: 3px 3px 20px #555;
+	font-size: min(8vw, 3rem);
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+
+p, ul {
+	color: #fff;
+	margin-bottom: 1.5rem;
+	font-weight: 400;
+}
+
+p, ul, span, a {
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+}
+
+@media screen and (min-width: 700px) {
+	p, ul, span, a {
+		font-size: 1.1rem;
+		line-height: 2rem;
+	}
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* HEADER & FOOTER */
+
+header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	background: var(--color-primary);
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #777;
+}
+
+@media screen and (min-width: 900px) {
+	header {
+		padding-inline: 5vw;
+	}
+}
+
+footer {
+	background: var(--color-primary);
+	color: #fff;
+	padding: 4rem 2rem;
+	text-align: center;
+}
+
+footer a {
+	color: rgb(187, 187, 187);
+}
+
+footer > * {
+	display: inline;
+}
+
+/* NAVIGATION */
+
+/* Hamburger button */
+
+.hamburger {
+	cursor: pointer;
+	margin-inline: 1rem;
+	display: inline-block;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 25px;
+	height: 3px;
+	background-color: var(--color-accent);
+	margin: 6px 0;
+	transition: 0.4s;
+	border-radius: 1rem;
+}
+
+.opened .bar1 {
+	-webkit-transform: translate(0px, 9px) rotate(-45deg);
+	transform: translate(0px, 9px) rotate(-45deg); 
+}
+
+.opened .bar2 {
+	opacity: 0;
+}
+
+.opened .bar3 {
+	-webkit-transform: translate(0px, -9px) rotate(45deg);
+	transform: translate(0px, -9px) rotate(45deg);
+}
+
+/* Menu content */
+
+nav {
+	position: absolute;
+	top: 101%;
+	left: 0;
+	width: 100%;
+	background-color: inherit;
+	text-align: center;
+	transition: transform 0.4s;
+	transform: translateY(-50%) scale(1, 0);
+}
+
+nav.opened {
+	transform: translateY(0) scale(1, 1);
+}
+
+.nav-list {
+	list-style-type: none;
+	font-size: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+}
+
+.nav-list a {
+	font-size: 1.2rem !important;
+}
+
+.nav-list li {
+	padding-block: 0.5rem;
+}
+
+.nav-list li:hover {
+	background-color: var(--color-primary-darken);
+}
+
+.nav-list li a {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.nav-list li a img {
+	margin: 3px;
+}
+
+@media screen and (min-width: 900px) {
+	.hamburger {
+		display: none;
+	}
+
+	nav {
+		transform: translateY(0) scale(1, 1);
+		position: relative;
+	}
+
+	nav .nav-list {
+		flex-direction: row;
+		justify-content: right;
+		align-items: center;
+	}
+
+	nav .nav-list li {
+		padding-inline: 1rem;
+		border-radius: 0.5rem;
+	}
+}
+
+/* MAIN PAGE */
+
+.main-section{
+	height: 100vh;
+	background: linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)), url(https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/main.jpg);
+	background-position-x: 25%;
+	background-position-y: 70%;
+	background-size: cover;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+	padding-inline: 2rem;
+	text-align: center;
+	padding-top: 10rem;
+}
+
+.main-section p {
+	font-weight: 500;
+}
+
+.scroll-down {
+	position: absolute;
+	bottom: 2rem;
+	cursor: pointer;
+}
+
+.scroll-down img {
+	height: 2rem;
+	width: 2rem;
+	transition: transform 0.3s;
+}
+
+.scroll-down:hover img {
+	transform: scale(150%)
+}
+
+/* CONTENT */
+
+/* Buttons */
+
+.button-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.button-container a {
+	background-image: linear-gradient(to right, var(--color-accent-2) 0%, var(--color-accent-1) 51%, var(--color-accent-2) 100%);
+	padding: 15px 40px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.3s;
+	background-size: 200% auto;
+	color: white;
+	border-radius: 5rem;
+	display: inline;
+	background-position: right center;
+}
+
+.button-container a:hover {
+	background-position: left center;
+}
+
+/* Sections */
+
+section {
+	position: relative;
+	display: flex;
+	text-align: left;
+	color: #fff;
+	font-weight: bold;
+	min-height: 50vh;
+	padding: 4rem 2rem;
+}
+
+@media screen and (min-width: 1100px) {
+	section {
+		padding: 6rem 10vw;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3rem;
+}
+
+section .container .text-container p:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Static sections */
+
+.static-section {
+	background-color: var(--color-primary-dark);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+}
+
+.static-section img {
+	max-width: 80%;
+}
+
+@media screen and (min-width: 900px) {
+	.static-section {
+		flex-direction: row;
+	}
+
+	.static-section > * {
+		flex: 1 1 0;
+  		width: 0;
+	}
+}
+
+/* Parallax sections */
+
+.parallax {
+	text-align: center;
+}
+
+#color-change {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .7)), url(https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/nfs.jpg);
+	background-position-x: 40%;
+}
+
+#window-tint {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)), url(https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/window.jpg);
+	background-position-x: 40%;
+	background-position-y: 60%;
+	background-size: 3200px;
+}
+
+#door-to-door {
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, .6)), url(https://sbfdnoibxzyv44dj.public.blob.vercel-storage.com/projects/modern-car/images/d2d.jpg);
+	background-position-x: 80%;
+	background-position-y: 60%;
+	background-size: 2200px;
+}
+
+/* Contakct page */
+
+hr {
+	margin-block: 2rem;
+}
+
+.contact {
+	text-align: center;
+}
+
+.contact .contact-data-title {
+	font-size: 2rem;
+}
+
+.contact-data-section .title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 1.2rem;
+}
+
+.contact .map {
+	max-width: 100%;
+}
